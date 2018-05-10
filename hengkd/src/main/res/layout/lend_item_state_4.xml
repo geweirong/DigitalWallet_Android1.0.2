@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/borrowing_record_rl_total"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@mipmap/pic_bg3"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/lend_message"
+            android:id="@+id/include"></include>
+        <TextView
+            android:id="@+id/tv_state_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/include"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="非常抱歉，您的资料暂不满足借款需求条件，并于30天后重新提交申请"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/borrowing_record_rl_total"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/shape_white_corner"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/layout_bank"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_write_item">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:text="推荐列表"
+                android:textColor="@color/c_999999"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tv_my_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="10dp"
+                android:layout_marginRight="15dp"
+                android:text="更多>>"
+                android:textColor="@color/global_label_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider_horizontal"></View>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/borrow_platform"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</FrameLayout>

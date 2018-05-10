@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_circle_side"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="费用详细"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/shape_red_top_circle"/>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信审查询费:"
+            android:textColor="@color/black_21"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_credit_inquiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+            android:text="00.0元"
+            android:textColor="@color/black_21"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户管理费:"
+            android:textColor="@color/black_21"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_account_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00.0元"
+            android:textColor="@color/black_21"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="利息:"
+            android:textColor="@color/black_21"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_interest_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00.0元"
+            android:textColor="@color/black_21"
+            android:textSize="17sp" />
+
+    </RelativeLayout>-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/recycler_service_fee"></android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/tv_fee_sure"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/layer_list_button_style"
+        android:gravity="center"
+        android:text="我知道了"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+</LinearLayout>

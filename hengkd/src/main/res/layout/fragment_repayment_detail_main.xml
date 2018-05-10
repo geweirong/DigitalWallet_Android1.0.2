@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/MatchMatch.Vertical"
+    android:background="@color/default_background">
+
+    <include
+        layout="@layout/layout_toolbar"/>
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        style="@style/MatchMatch">
+        <RelativeLayout
+            style="@style/MatchMatch.Vertical">
+            <include
+                layout="@layout/pull_recycle" />
+            <LinearLayout
+                android:id="@+id/layout_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_above="@+id/borrowing_record_ll_bottom"
+                android:background="@color/default_background"
+                android:orientation="vertical">
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/borrowing_refresh_view"
+                    style="@style/MatchMatch">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/borrowing_swipe_target"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/borrowing_record_ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/borrowing_tv_repayment_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/borrowing_record_tv_repay"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="还款总金额：0元"
+                    android:textColor="@color/black_6"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/borrowing_record_tv_repay"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/theme_color"
+                    android:gravity="center"
+                    android:text="立即还款"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_line_color" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.innext.szqb.widget.loading.LoadingLayout>
+
+</LinearLayout>

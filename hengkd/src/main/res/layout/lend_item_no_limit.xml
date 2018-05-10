@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/ll_no_limit"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:visibility="visible"
+              android:paddingTop="30dp"
+              android:paddingBottom="30dp"
+              android:background="@color/white"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:drawableTop="@mipmap/ok"
+        android:drawablePadding="15dp"
+        android:text="您的资料已提交，正在评估您的借款额度，这个过程预计需要1-15分钟"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/ll_service_tel"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="如遇问题可联系客服："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_service_tel"
+            android:text="400-185-5918"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

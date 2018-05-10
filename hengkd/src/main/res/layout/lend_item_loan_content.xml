@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Created by hengxinyongli at -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_loan_content"
+    style="@style/MatchWrap.Vertical">
+
+    <TextView
+        android:id="@+id/tv_loan_tips"
+        style="@style/MatchWrap"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:text="借款金额 ( 元 )"
+        android:textColor="@color/black_6"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        style="@style/MatchWrap"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="0dp"
+        android:text="0"
+        android:textColor="@color/lend_fragment_txt_color"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:background="@color/white">
+
+        <LinearLayout
+            style="@style/MatchWrap"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_sub"
+                style="@style/WrapWrap"
+                android:layout_marginLeft="10dp"
+                android:foreground="?selectableItemBackground"
+                android:src="@mipmap/ic_subtract"/>
+
+            <com.innext.szqb.widget.MySeekBar
+                android:id="@+id/seek_bar"
+                style="@style/AutoWrap"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxHeight="12dp"
+                android:minHeight="12dp"
+                android:paddingEnd="1dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingStart="1dp"
+                android:progressDrawable="@drawable/loan_progress_sb"
+                android:splitTrack="false"
+                android:thumb="@mipmap/money"
+                android:thumbOffset="1dp"/>
+
+            <ImageView
+                android:id="@+id/iv_add"
+                style="@style/WrapWrap"
+                android:layout_marginRight="10dp"
+                android:foreground="?selectableItemBackground"
+                android:src="@mipmap/ic_add"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_min_money"
+            style="@style/WrapWrap"
+            android:layout_marginLeft="45dp"
+            android:text="1000"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_max_money"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="48dp"
+            android:text="2000"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/lend_loan_ll_days"
+            style="@style/WrapWrap"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/loan_content_limit"
+                style="@style/WrapWrap"
+                android:layout_centerVertical="true"
+                android:text="借款期限: "
+                android:textColor="@color/black_6"
+                android:textSize="14sp"/>
+            <!--天数选择-->
+
+            <TextView
+                android:id="@+id/tv_loan_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/loan_content_limit"
+                android:background="@drawable/selector_home_time_btn"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="10期"
+                android:textAppearance="@style/homeDayTextColor"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        style="@style/MatchWrap"
+        android:background="@color/white">
+
+        <ImageView
+            style="@style/MatchWrap"
+            android:background="@mipmap/ic_lend_content_bottom"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/tv_rent_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_btn_height"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/layer_list_button_style"
+            android:gravity="center"
+            android:text="马上登录"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            style="@style/MatchWrap"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:drawableLeft="@mipmap/icon_fragment_lend_service"
+                android:drawablePadding="8dp"
+                android:text="不向学生提供借款"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"/>
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@mipmap/icon_fragment_lend_safety"
+                android:drawablePadding="8dp"
+                android:text="资金安全提示"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

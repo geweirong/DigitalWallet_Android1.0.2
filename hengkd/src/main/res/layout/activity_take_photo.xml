@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:layout_gravity="bottom">
+    
+    <ImageView 
+        android:id="@+id/iv_gap"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/selector_search_btn"
+	        android:orientation="vertical">
+	        
+            <Button
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dp"
+				android:background="@drawable/selector_search_btn"
+	            android:onClick="camera"
+	            android:textSize="16sp"
+	            android:textColor="@color/theme_color"
+	            android:textStyle="bold"
+	            android:text="拍照" />
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/global_grey_divider_color"
+                android:visibility="gone"/>
+	
+	        <Button
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dp"
+				android:background="@drawable/selector_search_btn"
+	            android:onClick="selectPhoto"
+	            android:textSize="16sp"
+	            android:textColor="@color/theme_color"
+	            android:textStyle="bold"
+	            android:text="从相册选择"
+	            android:visibility="visible"/>
+            
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dip"
+			android:background="@drawable/selector_search_btn"
+            android:onClick="cancel"
+            android:textSize="16sp"
+            android:textColor="@color/theme_color"
+            android:textStyle="bold"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

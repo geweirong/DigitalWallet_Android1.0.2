@@ -1,0 +1,52 @@
+360与应用宝加固后渠道信息会丢失，需要重新打包签名并写入渠道信息
+注：1.以下命令通过android studio 自带命令行Terminal操作
+    2.以下命令未带引号为命令代码，带引号的为注解，替换成相应值即可)
+步骤：
+1.重新打包签名(参考：https://juejin.im/entry/58561ff2128fe1006daeff2f)
+
+命令进入到sdk\build-tools\25.0.2(24以上)
+一个签名里单个应用,输入命令：apksigner sign --ks "签名文件路径" "加固后未签名的apk路径"
+一个签名里多个应用,输入命令：apksigner sign --ks "签名文件路径" --ks-key-alias "签名别名(本应用别名'好迈现金客')" --ks-pass pass:"keyStore密码"
+ --key-pass pass:"key密码" "加固后未签名的apk路径"
+
+执行命令后未输出任何信息则签名成功
+验证是否签名成功
+输入命令:apksigner verify -v "apk路径"
+如输出以下则签名成功：
+$ Verifies
+$ Verified using v1 scheme (JAR signing): true
+$ Verified using v2 scheme (APK Signature Scheme v2): true
+$ Number of signers: 1
+
+3.写入渠道信息(参考https://github.com/Meituan-Dianping/walle/blob/master/walle-cli/README.md)
+Terminal 进入到walle-cli-all.jar 路径同一级)
+写入渠道信息命令：java -jar walle-cli-all.jar put -c "渠道名" "apk路径"
+执行命令后未输出任何信息则写入成功,会在同目录下生成一个原apk名_渠道名的应用
+显示渠道信息命令：java -jar walle-cli-all.jar show "apk路径"
+
+示例命令：
+定位到签名文件目录
+cd E:\android\sdk\build-tools\25.0.2
+签名文件里单应用签名：
+apksigner sign --ks E:\android\Workspace\android_studio\HKD_Android\hengkd\appkey.jks E:\android\Workspace\android_studio\HKD_Android\
+hengkd\build\outputs\channels\test.apk
+签名文件里有多个应用签名：
+apksigner sign --ks E:\android\Workspace\android_studio\HKD_Android\hengkd\appkey.jks --ks-key-alias HKD --ks-pass pass:hxyl --k
+ey-pass pass:hxyl E:\android\Workspace\android_studio\HKD_Android\hengkd\build\outputs\channels\test.apk
+验证签名:
+apksigner verify -v E:\android\Workspace\android_studio\HKD_Android\hengkd\build\outputs\channels\test.apk
+定位到写入渠道信息目录(walle-cli-all.jar同级)
+cd E:\android\Workspace\android_studio\HKD_Android\hengkd
+查看渠道信息：
+java -jar walle-cli-all.jar show build\outputs\channels\test.apk
+写入渠道信息：
+java -jar walle-cli-all.jar put -c xjx-c360 build\outputs\channels\test.apk
+查看写入渠道信息后生成的包：
+java -jar walle-cli-all.jar show build\outputs\channels\test_xjx-c360.apk
+
+
+使用临时configFile生成渠道包:
+gradlew clean assembleReleaseChannels -PconfigFile=C:\Users\HX0010239ANDROID\Desktop\HXYL\HKD_Android\hengkd\config.json
+./gradlew clean assembleReleaseChannels -PconfigFile=/Users/xx/Documents/config.json
+
+gradlew clean assembleReleaseChannels -PconfigFile=E:\projectfile\DigitalWallet_Android1.0.1\hengkd\config.json

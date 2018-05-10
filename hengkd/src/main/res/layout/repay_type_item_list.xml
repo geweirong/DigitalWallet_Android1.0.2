@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_repay_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/press_style"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/iv_repey_type_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/record"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_repey_type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_repey_type_img"
+        android:text="银行卡"
+        android:textColor="@color/global_black_color"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/iv_enter_lend"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:padding="5dp"
+        android:src="@mipmap/icon_enter"/>
+</RelativeLayout>
+

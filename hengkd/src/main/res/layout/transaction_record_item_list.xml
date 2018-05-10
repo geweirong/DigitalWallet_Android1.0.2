@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_transaction"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_write_item">
+
+    <TextView
+        android:id="@+id/tv_transaction_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="1000元"
+        android:textColor="@color/repayment_black3_3"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_transaction_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_transaction_title"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:text="2016-09-15 12:26"
+        android:textColor="@color/repayment_black3_9" />
+
+    <TextView
+        android:id="@+id/tv_transaction_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:text="审核中" />
+        <!---
+        android:drawablePadding="6dp"
+        android:drawableRight="@mipmap/icon_enter"
+        -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_transaction_time"
+        android:background="@color/global_line_color" />
+</RelativeLayout>

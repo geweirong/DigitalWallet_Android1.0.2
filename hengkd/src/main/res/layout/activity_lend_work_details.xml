@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/theme_background_color">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llCustomerKb"
+        android:scrollbars="none"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="为保证借款申请顺利通过，请务必填写真实信息！"
+                android:textColor="#999999"
+                android:textSize="13sp"/>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/MatchWrap.Vertical"
+                android:layout_below="@+id/tv_tag"
+                android:background="@color/global_white_color"
+                app:divider="@drawable/divider_horizontal"
+                app:showDividers="beginning|middle">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="职位名称"
+                        android:textColor="#000000"
+                        android:textSize="15sp"/>
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_position_name"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"
+                        android:hint="请输入职位名称"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="单位名称"
+                        android:textColor="#000000"
+                        android:textSize="15sp"/>
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_company_name"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:maxLines="1"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"
+                        android:hint="请输入单位名称"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="单位电话"
+                        android:textColor="#000000"
+                        android:textSize="15sp"/>
+
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_company_phoneNum"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:inputType="number"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="#000000"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"
+                        android:hint="请输入单位电话"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="单位地址"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_choose_area"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@drawable/press_style">
+
+                        <TextView
+                            android:id="@+id/tv_company_area"
+                            android:layout_width="0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:textColor="@color/tab_normal"
+                            android:textSize="15sp"
+                            android:textColorHint="@color/global_label_color"
+                            android:hint="请选择单位地址"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <View
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/et_company_address"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.5"
+                        android:layout_marginLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="详细街道和门牌号"
+                        android:singleLine="true"
+                        android:textColor="@color/tab_normal"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_choose_badge_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/press_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp"
+                        android:text="工作证明"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/global_label_color"
+                        android:textSize="13sp"
+                        android:text="(上传后可提高通过率)"/>
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.5"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|right">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_take_photo"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_choose_incompany_duration"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/press_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp"
+                        android:text="工作时长"/>
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.5"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_incompany_duration"
+                            android:layout_width="0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:background="@null"
+                            android:maxLines="1"
+                            android:hint="@string/comm_title_choice"
+                            android:textColorHint="@color/global_label_color"
+                            android:textColor="@color/tab_normal"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/layout_logo_bottom"/>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

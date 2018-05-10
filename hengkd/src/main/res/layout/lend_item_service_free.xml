@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchWrap.Vertical">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_service_fee"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <!--服务费说明-->
+        <!--新改界面-->
+        <LinearLayout
+            android:id="@+id/ll_credit"
+            style="@style/AutoMatch.Vertical"
+            android:gravity="center">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:text="到期还款"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_arrival_amount"
+                style="@style/WrapWrap"
+                android:layout_marginTop="7dp"
+                android:text="0.00元"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_aaaaaa"/>
+
+        <!--利息-->
+        <LinearLayout
+            android:id="@+id/ll_total_and_profit"
+            style="@style/AutoMatch.Vertical"
+            android:gravity="center">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:text="服务费用"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_service_amount"
+                style="@style/WrapWrap"
+                android:layout_marginTop="7dp"
+                android:text="0.00元"
+                android:textColor="@color/black_6"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_efefef"/>
+</LinearLayout>

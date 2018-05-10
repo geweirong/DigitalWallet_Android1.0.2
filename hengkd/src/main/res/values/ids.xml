@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--banner -->
+    <item name="cb_item_tag" type="id"/>
+    <!-- 刷新view的ID-->
+    <item name="swipe_target" type="id" />
+    <!-- 头部view的ID-->
+    <item name="swipe_refresh_header" type="id" />
+    <!-- 尾部view的ID-->
+    <item name="swipe_load_more_footer" type="id" />
+</resources>

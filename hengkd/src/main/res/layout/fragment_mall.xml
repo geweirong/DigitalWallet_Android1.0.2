@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/MatchMatch.Vertical"
+        android:background="@color/default_background">
+    <!--
+    <include
+        layout="@layout/shop_title"
+        android:id="@+id/toolbar1"/>
+        -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"/>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progressbar_horizontal"
+        android:layout_below="@id/toolbar"/>
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        style="@style/MatchMatch">
+
+        <LinearLayout
+        style="@style/MatchMatch.Vertical">
+        <WebView
+            android:id="@+id/wb_mall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+            <LinearLayout
+                android:id="@+id/layout_no_authentication"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/global_white_color"
+                android:orientation="vertical">
+
+            <include
+                layout="@layout/mall_attach"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+         </LinearLayout>
+    </com.innext.szqb.widget.loading.LoadingLayout>
+</LinearLayout>

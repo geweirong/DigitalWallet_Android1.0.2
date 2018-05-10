@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/global_white_color">
+
+    <include
+        layout="@layout/layout_toolbar"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/theme_background_color"/>
+
+    <com.innext.szqb.widget.ClearEditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_edittext_focused"
+        android:drawableLeft="@mipmap/icon_paypwd_phone"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|left"
+        android:hint="请输入您的手机号"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="10dp"
+        android:textColor="@color/global_black_color"
+        android:textColorHint="@color/global_label_color"
+        android:textSize="16sp"/>
+
+    <com.innext.szqb.widget.ClearEditText
+        android:id="@+id/et_real_name"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/et_phone_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_edittext_focused"
+        android:drawableLeft="@mipmap/icon_paypwd_rname"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|left"
+        android:hint="请输入真实姓名"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:textColor="@color/global_black_color"
+        android:textColorHint="@color/global_label_color"
+        android:textSize="16sp"/>
+
+    <com.innext.szqb.widget.ClearEditText
+        android:id="@+id/et_idcard_num"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/et_real_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_edittext_focused"
+        android:drawableLeft="@mipmap/icon_paypwd_idcard"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical|left"
+        android:hint="请输入身份证号"
+        android:maxLength="18"
+        android:padding="10dp"
+        android:textColor="@color/global_black_color"
+        android:textColorHint="@color/global_label_color"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_verification"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/et_idcard_num"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/et_verification"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_edittext_focused"
+            android:drawableLeft="@mipmap/icon_paypwd_verification"
+            android:drawablePadding="8dp"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:textColor="@color/global_black_color"
+            android:textColorHint="@color/global_label_color"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_verification"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@id/et_verification"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="发送验证码"
+            android:textColor="@color/theme_color"
+            android:textSize="16sp"
+            />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_alignLeft="@id/tv_verification"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/theme_color"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_btn_height"
+        android:layout_below="@id/rl_verification"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/layer_list_button_style"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+
+    <include
+        android:id="@+id/llCustomerKb"
+        layout="@layout/global_input_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

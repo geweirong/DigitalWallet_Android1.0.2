@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/press_style"
+    android:layout_height="45dp">
+
+    <ImageView
+        android:id="@+id/iv_left_icon"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_personlinfor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_left_text"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/c_333333"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_left_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_enter"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_right_text"
+        android:textColor="@color/c_ffbe4f"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/iv_enter"
+        android:layout_centerVertical="true"
+        tools:text="去认证"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/bottom_grey_line"
+        android:background="@color/global_grey_divider_color"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</RelativeLayout>

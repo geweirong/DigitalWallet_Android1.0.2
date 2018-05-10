@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 标题背景颜色 -->
+    <color name="colorPrimary">#334fc0</color>
+    <!-- 主题色 -->
+    <color name="theme_color">#334fc0</color>
+    <!--按钮正常颜色-->
+    <color name="color_ff8d3c">#334fc0</color>
+    <!-- 标题字体颜色 -->
+    <color name="textColorPrimary">#ffffff</color>
+    <!-- 通知栏背景颜色 -->
+    <color name="colorPrimaryDark">#334fc0</color>
+    <!-- 各控制元件(如：EditText光标、check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色 -->
+    <color name="colorAccent">#334fc0</color>
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+
+    <!-- title textColor-->
+    <color name="title_text">#333333</color>
+    <color name="black_21">#212121</color>
+
+    <color name="default_background" >#eff3f5</color>
+    <color name="tab_selected">#ff0000</color>
+    <color name="tab_normal">#000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#80000000</color>
+    <color name="transparent_33">#33000000</color>
+
+    <color name="global_white_half_transparent">#80FFFFFF</color>
+    <color name="global_transparent">#66000000</color>
+    <color name="global_black_color">#333333</color>
+    <color name="global_grey_black_color">#666666</color>
+    <color name="global_red_color">#fd5353</color>
+    <color name="global_grey_bth_color">#b7b7b7</color>
+    <color name="global_label_color">#999999</color>
+    <color name="gray_cd">#cdcdcd</color>
+    <color name="global_hint_color">#cccccc</color>
+    <color name="global_blue_label_color1">#ff5145</color>
+    <color name="global_blue_label_color2">#35A7E9</color>
+
+    <color name="global_back_black_color">#f2f2f2</color>
+    <!-- 通用线条颜色-->
+    <color name="global_line_color">#d9d9d9</color>
+
+    <color name="global_white_color">#ffffff</color>
+
+    <color name="global_grey_divider_color">#e6e6e6</color>
+
+    <color name="progressbar_horizontal">#ffffff</color>
+
+    <color name="btn_gray">#d9d9d9</color>
+
+    <color name="btn_press_color">#ff0000</color>
+    <color name="theme_background_color">#eff3f5</color>
+    <color name="theme_line_color">#e6e6e6</color>
+    <color name="theme_gray">#b7b7b7</color>
+    <color name="dialog_cancel">#f0f0f0</color>
+
+    <!-- 首页天数颜色 -->
+    <color name="ad_color_yellow">#fcc225</color>
+    <!-- 首页倒计时颜色 -->
+    <color name="color_yellow">#ffbb17</color>
+
+    <!-- 地图颜色 -->
+    <color name="amap_transparent_theme_color">#664ab6fa</color>
+
+    <!--还款页面颜色-->
+    <color name="repayment_black3_3">#333</color>
+    <color name="repayment_black3_6">#666</color>
+    <color name="repayment_black3_9">#999</color>
+    <color name="repayment_status">#004192</color>
+
+    <!-- 广告页颜色 -->
+    <color name="auth_bottom_green_color">#2ebd59</color>
+    <color name="rippelColor">#FFFFFF</color>
+
+    <!-- **************************自定义仿IOS的AlertDialog的样式************************** -->
+    <color name="trans">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#004192</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="c_4262de">#4262de</color>
+    <!-- **************************自定义仿IOS的AlertDialog的样式************************** -->
+
+    <color name="black_3b">#3b3b3b</color>
+    <color name="black_43">#434343</color>
+    <color name="black_6">#666666</color>
+    <color name="black_75">#757575</color>
+    <color name="black_52">#525252</color>
+
+    <color name="black_3">#333</color>>
+    <color name="black_9">#999</color>
+
+    <color name="loading_text">#666666</color>
+
+    <color name="color_4370e3">#4370e3</color>
+
+    <color name="color_f2a311">#f2a311</color>
+
+    <color name="color_f5b85e">#f5b85e</color>
+
+
+    <color name="color_fc4336">#fc4336</color>
+
+    <color name="color_ff5145">#ff5145</color>
+
+
+
+    <color name="color_efefef">#efefef</color>
+    
+    <color name="color_aaaaaa">#aaaaaa</color>
+
+    <!--ycw添加一个新的主题颜色，原有的主题颜色保留 -->
+    <color name="subject_color">#334fc0</color>
+    <!--首页借款金额文字颜色-->
+    <color name="lend_fragment_txt_color">#FFD100</color>
+
+    <color name="more_title_color">#5752cc</color>
+    <color name="loan_overdue_fine_text_color">#FF6F6F</color>
+
+    <color name="c_A1B4FF">#A1B4FF</color>
+
+    <color name="c_ff4949">#ff4949</color>
+    <color name="c_334fe0">#334fe0</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_f5f5f5">#f5f5f5</color>
+    <color name="c_f8f8f8">#f8f8f8</color>
+    <color name="c_ffa000">#ffa000</color>
+    <color name="c_ffffff">#ffffff</color>
+    <color name="c_dedede">#dedede</color>
+    <color name="c_3073ed">#3073ed</color>
+
+    <color name="c_def4ff">#def4ff</color>
+    <color name="c_00ffffff">#0fff</color>
+
+    <color name="c_ece8e3">#ece8e3</color>
+    <color name="c_f2f1f1">#f2f1f1</color>
+
+    <color name="c_ffc96f">#ffc96f</color>
+    <color name="c_ffbe4f">#ffb333</color>
+    <color name="c_ffb333">#ffb333</color>
+    <color name="c_ff2121">#ff2121</color>
+    <color name="c_19000000">#19000000</color>
+    <color name="c_ffe8e6">#ffe8e6</color>
+    <color name="c_4b60cb">#4b60cb</color>
+    <color name="c_6c6c6c">#6c6c6c</color>
+    <color name="c_518fd5">#518fd5</color>
+    <color name="c_ebdb12">#ebdb12</color>
+    <color name="c_dcdae8">#dcdae8</color>
+    <color name="c_f76260">#f76260</color>
+    <color name="c_dddddd">#dddddd</color>
+</resources>

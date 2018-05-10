@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_guide_dot_select" android:state_enabled="false" />
+    <item android:drawable="@drawable/shape_guide_dot_nomal" android:state_enabled="true"/>
+
+</selector>

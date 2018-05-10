@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/MatchMatch.Vertical"
+              android:background="@color/theme_background_color">
+    <include layout="@layout/layout_toolbar" />
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        style="@style/MatchMatch">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        style="@style/MatchMatch">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/MatchWrap.Vertical">
+
+            <LinearLayout
+                android:id="@+id/content"
+                style="@style/MatchWrap.Vertical"
+                android:background="@color/global_white_color">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_grey_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="收款银行卡"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bank_card"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@mipmap/icon_enter"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center|right"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_grey_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="借款金额"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+                    <LinearLayout
+                        android:id="@+id/ly_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp"
+                            android:text="￥"/>
+                        <EditText
+                            android:id="@+id/tv_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="500-50000"
+                            android:inputType="number"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_grey_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="还款方式"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_productType"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_grey_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="借款期限"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_period"
+                        android:hint="3个月"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_enter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_grey_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="还款计划"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_plan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:drawableRight="@mipmap/icon_enter"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/global_grey_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="借款用途"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lend_use"
+                        android:hint="请选择"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_enter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/global_black_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/global_black_color"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_btn_height"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/layer_list_button_style"
+                android:gravity="center"
+                android:text="确认申请"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <CheckBox
+                    android:id="@+id/ck_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:drawablePadding="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_loan_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/ck_agreement"
+                    android:text="我已阅读并同意《居间服务协议》"
+                    android:textColor="@color/global_black_color"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_agreements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp">
+                <TextView
+                    android:id="@+id/tv_service_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《平台服务协议》"
+                    android:textColor="@color/theme_color"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tv_deduct_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="《授权扣款协议》"
+                    android:layout_toRightOf="@+id/tv_service_agreement"
+                    android:textColor="@color/theme_color"
+                    android:visibility="gone"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+
+            <include layout="@layout/layout_logo_bottom" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    </com.innext.szqb.widget.loading.LoadingLayout>
+
+</LinearLayout>

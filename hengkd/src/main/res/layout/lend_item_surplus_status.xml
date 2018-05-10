@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by hengxinyongli at -->
+<LinearLayout
+    android:id="@+id/ll_surplus_status"
+    style="@style/MatchWrap.Vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:background="@color/white"
+        android:paddingTop="20dp">
+        <TextView
+            android:id="@+id/tv_surplus_title"
+            android:text="距离下次申请借款时间"
+            android:textSize="20sp"
+            android:textColor="@color/black_43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@mipmap/oval"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_surplus_txt"
+                android:text="还 剩"
+                android:textSize="22sp"
+                android:textColor="#f2a311"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tv_surplus_day"
+                android:text="01"
+                android:textSize="48sp"
+                android:textColor="@color/color_ff5145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_surplus_txt"
+                android:layout_marginLeft="13dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:text="天"
+                android:textSize="13sp"
+                android:textColor="@color/color_ff5145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_surplus_day"
+                android:layout_alignBaseline="@+id/tv_surplus_day"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_lend_content_bottom"/>
+
+    </LinearLayout>
+
+        <com.innext.szqb.widget.DrawableCenterTextView
+            android:id="@+id/tv_surplus_btn"
+            android:text="提醒我"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_btn_height"
+            android:background="@drawable/layer_list_button_style"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="24dp"
+
+            android:layout_marginBottom="30dp"
+            android:gravity="center"/>
+
+</LinearLayout>

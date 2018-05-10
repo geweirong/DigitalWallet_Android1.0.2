@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/theme_background_color"
+    app:divider="@drawable/divider_horizontal"
+    app:showDividers="middle">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="?attr/toolbarNavigationButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="0px"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_edittext_normal"
+            android:drawableLeft="@mipmap/icon_poisearch"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="查找小区、大厦、学校等"
+            android:textColor="@color/global_label_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+
+            <com.amap.api.maps2d.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/line_center_vertical"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/icon_map_center" />
+
+            <View
+                android:id="@+id/line_center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/selector_btn_location"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <include
+            layout="@layout/pull_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+</android.support.v7.widget.LinearLayoutCompat>

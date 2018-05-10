@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch.Vertical">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            style="@style/MatchMatch">
+
+            <com.innext.szqb.widget.LockableScrollView
+                android:id="@+id/scroll_view"
+                style="@style/MatchMatch"
+                android:background="@color/color_efefef"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout style="@style/MatchMatch.Vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/banner_guide_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:background="@color/white"
+                            app:indicator_drawable_selected="@drawable/point_focused"
+                            app:indicator_drawable_unselected="@drawable/point_unfocused"
+                            app:indicator_height="7dp"
+                            app:indicator_margin="3dp"
+                            app:indicator_width="7dp" />
+
+                        <ImageView
+                            android:id="@+id/lend_main_iv_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="12dp"
+                            android:padding="14dp"
+                            android:src="@mipmap/icon_message" />
+                    </RelativeLayout>
+
+                    <!-- 借款时，该布局需要显示-->
+                    <RelativeLayout
+                        android:id="@+id/rl_credit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/white"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/credit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="信用额度(元)："
+                            android:textColor="@color/black_3b"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_credit_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/credit_text"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textColor="@color/black_3b"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_improveMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="22dp"
+                            android:gravity="center"
+                            android:text="点我有惊喜 >"
+                            android:textColor="@color/global_blue_label_color2"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/credit_text"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginRight="23dp"
+                            android:background="@color/global_grey_divider_color" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/lend_item_service_free" />
+
+                    <!--未借款布局 -->
+                    <RelativeLayout
+                        style="@style/MatchWrap"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@mipmap/notice_icon"/>
+
+                        <com.innext.szqb.widget.RollView
+                            android:id="@+id/roll_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/iv_icon"
+                            android:visibility="gone"/>
+
+                        <com.innext.szqb.widget.TextSwitchView
+                            android:id="@+id/tsv_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/iv_icon"
+                            android:drawablePadding="5dp"
+                            android:ellipsize="marquee"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"/>
+
+                        <View
+                            android:id="@+id/view_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@+id/tsv_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/global_line_color"/>
+                    </RelativeLayout>
+
+                    <include layout="@layout/lend_item_loan_content" />
+                    <!--额度评估中,机审未通过,即没有额度的情况-->
+                    <include layout="@layout/lend_item_no_limit"/>
+                    <!--审核状态布局-->
+                    <include layout="@layout/lend_item_status_content" />
+                    <!-- 倒计时布局 包括下次借款、剩余还款、逾期倒计时等-->
+                    <include layout="@layout/lend_item_surplus_status" />
+
+                </LinearLayout>
+            </com.innext.szqb.widget.LockableScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </com.innext.szqb.widget.loading.LoadingLayout>
+
+</LinearLayout>

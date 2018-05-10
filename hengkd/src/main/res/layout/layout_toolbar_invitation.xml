@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修改toolbar背景 设置activity主题即可-->
+<!-- PS:include需要加id的 请与Toolbar id保持一致(toolbar)-->
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:contentInsetStart="0dp">
+
+    <com.innext.szqb.widget.DrawableCenterTextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="@dimen/title_height"
+        android:gravity="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        style="?attr/toolbarNavigationButtonStyle"/>
+    <com.innext.szqb.widget.DrawableCenterTextView
+        android:id="@+id/tv_close"
+        style="?attr/toolbarNavigationButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="@dimen/title_height"
+        android:gravity="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        android:drawableLeft="@mipmap/icon_close"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:drawablePadding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:maxLength="11"/>
+    <com.innext.szqb.widget.DrawableCenterTextView
+        android:id="@+id/tv_right"
+        style="?attr/toolbarNavigationButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="@dimen/title_height"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"/>
+</android.support.v7.widget.Toolbar>
+

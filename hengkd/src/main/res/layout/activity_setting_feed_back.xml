@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/theme_background_color"
+     >
+
+    <!--标题-->
+    <include
+        layout="@layout/layout_toolbar"/>
+    
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="154dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_edittext_normal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/input_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:hint="请输入您的宝贵意见，我们会为您不断进步。"
+            android:lines="9"
+            android:maxLength="160"
+            android:padding="10dp"
+            android:textColor="@color/global_black_color"
+            android:textColorHint="@color/global_label_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:text="160/160"
+            android:textColor="@color/global_label_color" />
+    </RelativeLayout>
+    
+
+    
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_height="@dimen/global_btn_height"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="15dp"
+    	android:layout_marginRight="15dp"
+    	android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:background="@drawable/layer_list_button_style"
+        android:text="马上提交"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="21dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/icon_feedback_custom_service"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/global_label_color"
+                android:textSize="16sp"
+                android:text="客服工作时间"/>
+
+            <TextView
+                android:id="@+id/tv_worktime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/global_label_color"
+                android:textSize="15sp"
+                android:text="平时：9:30 ~ 18:30"/>
+            <TextView
+                android:id="@+id/tv_holiday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/global_label_color"
+                android:textSize="15sp"
+                android:text="节假：9:30 ~ 18:30"/>
+            <TextView
+                android:id="@+id/tv_qq_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/global_label_color"
+                android:textSize="15sp"
+                android:text="客服QQ：414383376"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_feedback_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_online_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_search_btn"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/global_grey_black_color"
+            android:textSize="16sp"
+            android:text="在线客服"/>
+
+        <TextView
+            android:id="@+id/tv_phone_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_search_btn"
+            android:gravity="center"
+            android:layout_marginLeft="14dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/global_grey_black_color"
+            android:textSize="16sp"
+            android:text="电话客服"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

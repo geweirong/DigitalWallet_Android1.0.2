@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:id="@+id/ly_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/material_card"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_score_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="完成4项认证即送168积分"
+            android:textColor="@color/c_ffffff"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="20dp"
+            android:textSize="@dimen/sp_16"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size13"
+            android:textColor="@color/c_666666"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/authentication_process"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size13"
+            android:textColor="@color/c_666666"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/authentication_award"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+          <LinearLayout
+              android:layout_width="50dp"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="center_horizontal">
+              <ImageView
+                  android:id="@+id/iv_personl"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_personlinfor"
+                  android:layout_marginTop="15dp"/>
+              <View
+                  android:layout_width="0.5dp"
+                  android:layout_height="30dp"
+                  android:background="@color/c_dddddd"></View>
+              <ImageView
+                  android:id="@+id/iv_contacts"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_contacts_"/>
+              <View
+                  android:layout_width="0.5dp"
+                  android:layout_height="30dp"
+                  android:background="@color/c_dddddd"></View>
+              <ImageView
+                  android:id="@+id/iv_operator"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_operator_"/>
+              <View
+                  android:layout_width="0.5dp"
+                  android:layout_height="30dp"
+                  android:background="@color/c_dddddd"></View>
+              <ImageView
+                  android:id="@+id/iv_credit"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@mipmap/ic_credit_"/>
+          </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_40"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/selector_write_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="个人信息"
+                        android:textColor="@color/c_333333"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_current_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/current_certification"
+                        android:text="（当前环节）" />
+
+                    <TextView
+                        android:id="@+id/tv_my_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="right"
+                        android:text="66积分"
+                        style="@style/current_certification" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/selector_write_item"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_contacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="紧急联系人"
+                        android:textColor="@color/c_999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_current_contacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/current_certification"
+                        android:visibility="invisible"
+                        android:text="（当前环节）" />
+
+                    <TextView
+                        android:id="@+id/tv_integral_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="right"
+                        android:text="88积分"
+                        android:textColor="@color/c_333333"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/selector_write_item"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_operator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="运营商"
+                        android:textColor="@color/c_999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_current_operator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/current_certification"
+                        android:visibility="invisible"
+                        android:text="（当前环节）" />
+
+                    <TextView
+                        android:id="@+id/tv_integral_operator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="right"
+                        android:text="99积分"
+                        android:textColor="@color/c_333333"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/c_dddddd"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/selector_write_item"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:text="芝麻信用"
+                        android:textColor="@color/c_999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_current_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/current_certification"
+                        android:visibility="invisible"
+                        android:text="（当前环节）" />
+
+                    <TextView
+                        android:id="@+id/tv_integral_credit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="right"
+                        android:text="168积分"
+                        android:textColor="@color/c_333333"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="@dimen/dp_40"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_select"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="@string/order_finished"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

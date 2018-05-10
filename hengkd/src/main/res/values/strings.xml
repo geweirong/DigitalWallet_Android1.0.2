@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">数字钱包</string>
+
+    <item name="np__increment" type="id" />
+    <item name="np__decrement" type="id" />
+
+    <!--额度-->
+    <string name="limit_hint">为保证提额申请顺利通过，请务必填写真实信息！</string>
+
+    <string name="liveness_detection_failed">活体检测失败</string>
+    <string name="liveness_detection_failed_timeout">活体检测超时失败</string>
+    <string name="liveness_detection_failed_action_blend">活体检测动作错误</string>
+    <string name="liveness_detection_failed_not_video">活体检测连续性检测失败</string>
+    <string name="verify_success">验证成功</string>
+    <string name="face_too_large">请再离远一些</string>
+    <string name="meglive_pitch">缓慢点头</string>
+    <string name="meglive_yaw">左右摇头</string>
+    <string name="meglive_mouth_open_closed">张嘴</string>
+    <string name="meglive_eye_open_closed">眨眼</string>
+    <string name="meglive_pos_yaw_left">左转</string>
+    <string name="meglive_pos_yaw_right">右转</string>
+    <!--商城授权-->
+    <string name="mall_attach">请先授权获取位置及昵称信息</string>
+
+    <!--完善资料-->
+    <string name="perfect_information">认证中心</string>
+    <string name="perfect_tip">资料有效期为60天</string>
+    <string name="feedback">遇到问题？立即吐槽</string>
+    <string name="authentication_process">申请流程</string>
+    <string name="authentication_award">累计奖励</string>
+    <string name="order_finished">订单提交完成后，领取168积分，可在商城兑换商铺。</string>
+    <!--个人信息-->
+    <string name="personal_information">个人信息</string>
+    <!--保存-->
+    <string name="save">保存</string>
+    <!--登录密码输入规则，只能输入字母或数字-->
+    <string name="login_password_input">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890</string>
+    <string name="login_password_alter">密码只能包含数字或字母</string>
+
+
+    <string name="verifycode_title">验证码</string>
+    <string name="verifycode_content">我们需要判断你是不是外星人？</string>
+    <string name="verifycode_leftBtnText">取消</string>
+    <string name="verifycode_rightBtnText">确定</string>
+    <string name="comm_title_choice">请选择</string>
+
+    <string name="loading_text">加载中&#8230;</string>
+    <string name="cb_credit_des1">获取个人征信报告的方式：</string>
+    <string name="cb_credit_des2">1.个人征信网:https://ipcrs.pbccrc.org.cn/</string>
+    <string name="cb_credit_des3">①去官网注册个账号;\n②登录查询自己的个人信用报告;\n③截图保存至手机相册后上传;</string>
+    <string name="cb_credit_des4">①前往银行柜台咨询;\n②打印一份个人信用报告;\n③直接拍照上传或者保存至手机相册后上传;</string>
+    <string name="cb_credit_des5">3.如遇问题可联系客服: 400-102-2770</string>
+    <string name="work_img_hint">请拍摄工牌或者公司前台照片</string>
+
+    <!--我的邀请码-->
+    <string name="invatation_tab1">邀请1人注册将获得100积分</string>
+    <string name="invatation_tab2">邀请1人借款将获得500积分</string>
+
+    <!--服务费提示-->
+    <string name="charge_dialog">您的个人信用报告由第三方提供，第三方将在放款成功后，从您的账户扣划收取借款金额*0.25的费用，放款不成功不收费；您可以在“我的积分”进行查看个人信用报告；超过72小时需要重新申请；</string>
+
+    <!--我的-->
+    <string name="more_sign">触手可及的数字钱包</string>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/theme_background_color">
+	<include
+		layout="@layout/layout_toolbar"/>
+	<TextView
+		android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/tv_tip"
+	    android:textColor="#000000"
+	    android:textSize="14sp"
+	    android:lineSpacingExtra="6dp"
+	    android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginBottom="13dp"/>
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/recycler_img"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:layout_marginLeft="13dp"
+		android:layout_marginRight="13dp"/>
+
+	<Button
+		android:id="@+id/btn_upload"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/global_btn_height"
+	    android:text="上传"
+	    android:textColor="#ffffff"
+	    android:background="@drawable/layer_list_button_style"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"/>
+</LinearLayout>

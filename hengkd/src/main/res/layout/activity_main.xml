@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch.Vertical"
+    app:divider="@drawable/divider_horizontal"
+    app:showDividers="middle">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.innext.szqb.widget.MyRadioButton
+            android:id="@+id/rb_lend"
+            style="@style/menu_tab"
+            android:text="借款"
+            app:rbDrawableTop="@drawable/selector_menu_1"/>
+        <com.innext.szqb.widget.MyRadioButton
+            android:id="@+id/rb_mall"
+            style="@style/menu_tab"
+            android:text="商城"
+            app:rbDrawableTop="@drawable/selector_menu_4"/>
+        <com.innext.szqb.widget.MyRadioButton
+            android:id="@+id/rb_rent_lend"
+            style="@style/menu_tab"
+            android:text="还款"
+            android:visibility="gone"
+            app:rbDrawableTop="@drawable/selector_menu_2" />
+
+
+        <com.innext.szqb.widget.MyRadioButton
+            android:id="@+id/rb_account"
+            style="@style/menu_tab"
+            android:text="我的"
+            app:rbDrawableTop="@drawable/selector_menu_3" />
+    </RadioGroup>
+
+</android.support.v7.widget.LinearLayoutCompat>
+

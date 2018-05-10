@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <TextView
+            android:id="@+id/tv_period"
+            android:text="第1期"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/c_666666"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_expectRepayDate"
+            android:textColor="@color/c_333333"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"
+            android:text="2018年05月01日"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="￥1000"
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/global_grey_divider_color"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="1px"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

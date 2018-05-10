@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态 -->
+    <item android:drawable="@mipmap/icon_seekbar_thumb_down" android:state_pressed="true" />
+
+    <!-- 焦点状态 -->
+    <item android:drawable="@mipmap/icon_seekbar_thumb_down" android:state_focused="true" />
+
+    <!-- 焦点状态 -->
+    <item android:drawable="@mipmap/icon_seekbar_thumb_down" android:state_selected="true" />
+
+    <!-- 默认状态 -->
+    <item android:drawable="@mipmap/icon_seekbar_thumb_down" />
+
+</selector> 

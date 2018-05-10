@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by hengxinyongli at -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_status_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="visible">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_loan_tag"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:src="@mipmap/icon_loan_status_time"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_loan_tag"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:textColor="@color/global_black_color"-->
+            <!--android:textSize="15sp"/>-->
+    <!--</LinearLayout>-->
+    <!---->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/theme_line_color"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/ll_status_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingTop="25dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_lend_content_bottom"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ikonw_btn"
+        android:layout_height="@dimen/global_btn_height"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="@drawable/layer_list_button_style"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

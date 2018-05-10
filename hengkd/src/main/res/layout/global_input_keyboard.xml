@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 以后还是尽量用系统键盘的方式，暂时用这个来实现 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/global_back_black_color"
+    android:orientation="vertical"
+    android:id="@+id/llCustomerKb"
+    android:divider="@drawable/divider_horizontal"
+    android:showDividers="beginning|middle">
+
+    <!-- 这里可以用GridView，但是这种固定布局，用这种性能和点击体验也许更好 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_glk_title" />
+
+        <ImageView
+            android:id="@+id/ivGlkHide"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_glk_arrow_down"
+            android:background="@drawable/press_style"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:divider="@drawable/divider_horizontal"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_vertical"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/btGlkNum1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_vertical"
+            android:showDividers="middle" >
+
+            <Button
+                android:id="@+id/btGlkNum4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_vertical"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/btGlkNum7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:divider="@drawable/divider_vertical"
+            android:showDividers="middle" >
+
+            <Button
+                android:id="@+id/btGlkNumDot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="·"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btGlkNum0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/global_black_color"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ivGlkDelete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f2f2f2"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/icon_glk_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

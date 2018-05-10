@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/global_white_color" >
+    
+	<include
+		layout="@layout/layout_toolbar"/>
+	
+
+    <EditText
+	      android:id="@+id/et_new_pwd"
+	      android:layout_height="50dp"
+	      android:layout_width="fill_parent"
+	      android:layout_centerHorizontal="true"
+	      android:layout_marginLeft="20dp"
+	      android:layout_marginRight="20dp"
+	   	  android:layout_marginTop="20dp"
+	      android:maxLength="16"
+	      android:paddingLeft="10dp"
+	      android:hint="请输入新密码"
+	      android:gravity="center_vertical|left"
+		  android:digits="@string/login_password_input"
+	      android:background="@drawable/shape_edittext"        
+	      android:textColor="@color/global_black_color"
+	      android:textSize="16sp" 
+	      />
+		
+	<EditText
+	      android:id="@+id/et_new_pwd_again"
+	      android:layout_height="50dp"
+	      android:layout_width="match_parent"
+	      android:layout_marginLeft="20dp"
+	      android:layout_marginRight="20dp"
+	      android:layout_marginTop="10dp"
+	      android:maxLength="16"
+	      android:paddingLeft="10dp"
+	      android:hint="请确认新密码"
+		  android:digits="@string/login_password_input"
+	      android:gravity="center_vertical|left"
+	      android:background="@drawable/shape_edittext"        
+	      android:textColor="@color/global_black_color"
+	      android:textSize="16sp" 
+	      />
+		
+	  <TextView
+	      android:id="@+id/et_prompt"
+	      android:layout_height="wrap_content"
+	      android:layout_width="wrap_content"
+	      android:layout_marginLeft="20dp"
+	      android:layout_marginRight="20dp"
+	      android:layout_marginTop="10dp"
+	      android:gravity="center_vertical|left"
+	      android:text="密码需由6~16位字母或数字组成"
+	      android:textColor="@color/global_black_color"
+	      android:textSize="16sp" />
+
+		<TextView
+	        android:id="@+id/tv_complete"
+	        android:layout_height="@dimen/global_btn_height"
+	        android:layout_width="match_parent"
+	    	android:layout_marginLeft="20dp"
+	    	android:layout_marginRight="20dp"
+	    	android:layout_marginTop="10dp"
+	        android:gravity="center"
+	        android:background="@drawable/layer_list_button_style"
+	        android:text="完  成"
+	        android:textColor="#ffffff"
+	        android:textSize="18sp" />
+</LinearLayout>

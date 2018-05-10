@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_white_circle_side"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_red_top_circle"
+        android:gravity="center"
+        android:text="费用详情"
+        android:textColor="@color/white"
+        android:textSize="22sp"/>
+
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_background">
+
+        <LinearLayout
+            style="@style/MatchWrap.Vertical"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_cost_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="36dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/global_btn_height"
+                android:layout_marginBottom="23dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layer_list_button_style"
+                android:gravity="center"
+                android:text="我知道了"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </com.innext.szqb.widget.loading.LoadingLayout>
+
+
+</LinearLayout>

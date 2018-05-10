@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    android:background="@color/global_white_color" >
+	<include
+		android:id="@+id/toolbar"
+		layout="@layout/layout_toolbar"/>
+    <View 
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/theme_background_color"
+		android:layout_below="@+id/toolbar"/>
+    
+    <ScrollView 
+        android:id="@+id/scrollview"
+        style="@style/MatchMatch"
+		android:layout_below="@+id/line1"
+		android:layout_above="@+id/llCustomerKb">
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            
+            <ImageView 
+		        android:id="@+id/iv_logo"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="50dp"
+		        android:src="@mipmap/register_logo"/>
+		
+		    <com.innext.szqb.widget.ClearEditText
+		        android:id="@+id/et_phone_number"
+		        android:layout_width="fill_parent"
+		        android:layout_height="45dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="50dp"
+		        android:background="@drawable/shape_edittext"
+		        android:drawableLeft="@mipmap/icon_phone_x"
+		        android:drawablePadding="8dp"
+		        android:gravity="center_vertical|left"
+		        android:textColorHint="@color/global_hint_color"
+		        android:hint="请输入注册/登录手机号"
+		        android:inputType="number"
+		        android:maxLength="11"
+		        android:padding="10dp"
+		        android:textColor="@color/global_black_color"
+		        android:textSize="16sp" />
+		
+		    <TextView
+		        android:id="@+id/tv_next"
+		        android:layout_width="fill_parent"
+		        android:layout_height="@dimen/global_btn_height"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginBottom="50dp"
+		        android:background="@drawable/layer_list_button_style"
+		        android:gravity="center"
+		        android:text="下一步"
+		        android:textColor="@android:color/white"
+		        android:textSize="18sp" 
+		        android:focusable="true"/>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+    
+    <include
+        android:id="@+id/llCustomerKb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/global_input_keyboard"
+        android:visibility="gone" />
+    
+</RelativeLayout>

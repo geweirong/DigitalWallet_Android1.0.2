@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/theme_background_color"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/paddingView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#bdbdbd"
+        />
+
+    <!--标题-->
+    <include
+        layout="@layout/layout_toolbar"/>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/MatchWrap.Vertical"
+        android:layout_marginTop="11dp"
+        app:divider="@drawable/divider_horizontal"
+        app:showDividers="beginning|middle|end">
+
+        <RelativeLayout
+            android:id="@+id/layout_check_update"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/press_style">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="检查更新"
+                android:textColor="@color/global_black_color"
+                android:textSize="15sp"
+                android:drawableLeft="@mipmap/icon_update"
+                android:drawablePadding="15dp"/>
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/iv_right"
+                android:drawablePadding="10dp"/>
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:padding="6dp"
+                android:src="@mipmap/icon_enter"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_about_my"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/press_style"
+            android:drawableLeft="@mipmap/about_my"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/icon_enter"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="关于我们"
+            android:textColor="@color/global_black_color"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/layout_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/press_style"
+            android:drawableLeft="@mipmap/feedback"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/icon_enter"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="意见反馈"
+            android:textColor="@color/global_black_color"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/layout_modification_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/press_style"
+            android:drawableLeft="@mipmap/login_password"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/icon_enter"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="修改登录密码"
+            android:textColor="@color/global_black_color"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/layout_modification_trade_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/press_style"
+            android:drawableLeft="@mipmap/trade_password"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/icon_enter"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:text="修改交易密码"
+            android:textColor="@color/global_black_color"
+            android:textSize="15sp"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tv_exit"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/layer_list_button_style"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

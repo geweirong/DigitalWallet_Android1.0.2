@@ -1,0 +1,52 @@
+{
+  "channelInfoList": [
+    {
+      "channel":"MySelf"//自有渠道(本服务器)
+    },
+    {
+      "channel": "xiaomi"//小米
+    },
+    {
+      "channel": "huawei"//华为
+    },
+    {
+      "channel": "c360"//360
+    },
+    {
+      "channel": "yingyongbao"//应用宝
+    },
+    {
+      "channel": "yingyongbao_wzl"//应用宝
+    },
+    {
+      "channel": "yingyongbao_dt"//应用宝
+    },
+    {
+      "channel": "yingyongbao_dt2"//应用宝
+    },
+    {
+      "channel": "yingyongbao_wzl2"//应用宝
+    },
+    {
+      "channel": "baidu"//百度
+    },
+    {
+      "channel": "meizu"//魅族
+    },
+    {
+      "channel": "oppo"//oppo
+    },
+    {
+      "channel": "vivo"//vivo
+    },
+    {
+      "channel": "leshi"//乐视
+    },
+    {
+      "channel": "wandoujia"//阿里豌豆荚
+    },
+    {
+      "channel": "lenovo"//联想
+    }
+  ]
+}

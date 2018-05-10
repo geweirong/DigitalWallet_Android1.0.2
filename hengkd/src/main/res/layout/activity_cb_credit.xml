@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingBottom="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="确认并上传"
+                    android:textSize="18sp"
+                    android:layout_marginTop="39dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/selector_btn_apply"
+                    android:layout_height="44dp"/>
+
+                <TextView
+                    android:text="提示：请上传近8天的个人征信报告"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/c_ff2121"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/c_666666"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cb_credit_des1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_credit_url"
+                    android:textIsSelectable="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/c_666666"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/cb_credit_des2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/c_666666"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/cb_credit_des3"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/c_666666"
+                    android:layout_marginTop="3dp"
+                    android:text="2.线下银行打印"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/c_666666"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/cb_credit_des4"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_service_tel"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/c_666666"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/cb_credit_des5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </com.innext.szqb.widget.loading.LoadingLayout>
+</LinearLayout>

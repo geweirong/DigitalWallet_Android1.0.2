@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/borrowing_record_rl_total"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@mipmap/pic_bg3"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/lend_message"
+            android:id="@+id/include"></include>
+
+        <TextView
+            android:id="@+id/tv_statu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@+id/tv_money"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@mipmap/pic_bg1"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="已逾期"
+            android:textColor="@color/c_ffffff"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/borrowing_record_tv_current_period_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/include"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="应还金额（元）"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_repay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/borrowing_record_tv_current_period_money"
+            android:layout_centerHorizontal="true"
+            android:text="1000.00"
+            android:textSize="40sp"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/tv_repayment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_repay_money"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="请于5月20日前还款"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/borrowing_record_rl_total"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/shape_white_corner"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+        <TextView
+            android:id="@+id/tv_repayment_btn"
+            android:layout_height="@dimen/global_btn_height"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@drawable/layer_list_button_style"
+            android:textColor="@color/white"
+            android:text="立即还款"
+            android:textSize="18sp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_tel_serve"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/c_333333"
+            android:text="如有疑问，可联系400-102-2770或关注公众号szqb1688"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

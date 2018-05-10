@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+/build/
+/.idea/
+/.classpath
+/.project
+/project.properties
+/ic_launcher-web.png
+/lint.xml
+/proguard/
+/gen/

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/press_style"
+                android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_cost_type"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="20dp"
+        android:text="借款利息:"
+        android:textColor="@color/black_3"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_cost_"
+        style="@style/WrapWrap"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="0元"
+        android:textColor="#545456"
+        android:textSize="15sp"
+        android:textStyle="italic"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="1px"
+        android:layout_marginTop="14dp"
+        android:background="@color/trans"/>
+</RelativeLayout>

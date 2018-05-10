@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/global_back_black_color">
+
+        <TextView
+            android:id="@+id/tv_header_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="本月"
+            android:textColor="@color/c_666666"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_header_expend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="支出:0"
+            android:visibility="gone"
+            android:textColor="@color/c_666666"/>
+
+        <TextView
+            android:id="@+id/tv_header_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:visibility="gone"
+            android:layout_toLeftOf="@id/tv_header_expend"
+            android:text="收入:3600"
+            android:textColor="@color/c_666666"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/global_grey_divider_color"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:text="今日"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/c_666666"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/c_666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_below="@id/tv_date"
+            android:text="14:02"/>
+
+        <TextView
+            android:id="@+id/tv_score_type"
+            android:textColor="@color/c_333333"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"
+            android:text="会员赠送"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_total_score"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="-800"
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/global_grey_divider_color"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="1px"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

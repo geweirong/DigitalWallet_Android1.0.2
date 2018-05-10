@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/global_back_black_color"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/c_666666"
+                            tools:text="您的资料进度已完成60%" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_alignParentBottom="true"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/info_progress_bar" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/global_back_black_color"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="基础认证(必填)"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="所有资料必须使用本人信息"
+                            android:textColor="@color/c_ffbe4f"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <com.innext.szqb.widget.InfoItemView
+                        android:id="@+id/iiv_personal_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:iivLeftImage="@mipmap/ic_personlinfor"
+                        app:iivLeftText="个人信息" />
+
+                    <com.innext.szqb.widget.InfoItemView
+                        android:id="@+id/iiv_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:iivLeftImage="@mipmap/ic_contacts"
+                        app:iivLeftText="联系人" />
+
+                    <com.innext.szqb.widget.InfoItemView
+                        android:id="@+id/iiv_mobile_operator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:iivLeftImage="@mipmap/ic_operator"
+                        app:iivLeftText="运营商" />
+
+                    <com.innext.szqb.widget.InfoItemView
+                        android:id="@+id/iiv_zm_credit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:iivLeftImage="@mipmap/ic_credit"
+                        app:iivLeftText="芝麻信用" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/global_back_black_color"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提额认证(选填)"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="认证完成后，最高可借5万元噢~"
+                            android:textColor="@color/c_f76260"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <com.innext.szqb.widget.InfoItemView
+                        android:id="@+id/iiv_xyk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:iivLeftImage="@mipmap/credit_card"
+                        app:iivLeftText="信用卡" />
+
+                    <TextView
+                        android:id="@+id/tv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/perfect_tip"
+                        android:textSize="11sp"
+                        android:textColor="@color/c_333333" />
+
+                    <Button
+                        android:id="@+id/btn_apply"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/selector_btn_apply"
+                        android:enabled="false"
+                        android:text="提交申请"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/rl_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cb_agree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/check_box_selector"
+                            android:checked="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="我已阅读并同意"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_credit_agreement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="《信用授权协议》"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"/>
+                    <TextView
+                        android:id="@+id/tv_credit_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:padding="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="@string/feedback"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </com.innext.szqb.widget.loading.LoadingLayout>
+
+</LinearLayout>

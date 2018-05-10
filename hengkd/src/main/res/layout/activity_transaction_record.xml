@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background_color"
+    android:orientation="vertical">
+    <!--标题-->
+    <include layout="@layout/layout_toolbar" />
+
+    <!--<com.innext.hkd.widget.swipetoloadlayout.base.SwipeToLoadLayout-->
+        <!--android:id="@+id/refreshLoad"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<include-->
+        <!--android:id="@+id/swipe_refresh_header"-->
+        <!--layout="@layout/layout_google_hook_header" />-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/refresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="14dp"-->
+        <!--android:divider="@null"-->
+        <!--android:overScrollMode="never"></android.support.v7.widget.RecyclerView>-->
+        <!--<include-->
+        <!--android:id="@+id/swipe_load_more_footer"-->
+        <!--layout="@layout/layout_google_hook_footer" />-->
+    <!--</com.innext.hkd.widget.swipetoloadlayout.base.SwipeToLoadLayout>-->
+    <include layout="@layout/pull_recycle" />
+</LinearLayout>

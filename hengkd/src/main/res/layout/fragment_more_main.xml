@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch.Vertical"
+    android:background="@color/color_efefef">
+    <!--标题-->
+    <include layout="@layout/layout_toolbar" />
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        style="@style/MatchMatch">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/my_header_line"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@mipmap/my_bj">
+
+                <TextView
+                    android:id="@+id/tv_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:text="189****6180"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/size20" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/size13"
+                    android:text="@string/more_sign" />
+            </RelativeLayout>
+            <ScrollView
+                style="@style/MatchMatch"
+                android:scrollbars="none">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@style/MatchMatch.Vertical"
+                    app:divider="@drawable/divider_horizontal"
+                    app:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/global_white_color"
+                        android:orientation="horizontal">
+
+                        <com.innext.szqb.widget.DrawableCenterTextView
+                            android:id="@+id/layout_perfect"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/press_style"
+                            android:drawablePadding="10dp"
+                            android:drawableTop="@mipmap/organizingdata"
+                            android:gravity="center_horizontal"
+                            android:text="完善资料"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/theme_line_color" />
+
+                        <com.innext.szqb.widget.DrawableCenterTextView
+                            android:id="@+id/layout_lend_record"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/press_style"
+                            android:drawablePadding="10dp"
+                            android:drawableTop="@mipmap/record"
+                            android:gravity="center_horizontal"
+                            android:text="借款记录"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <!-- 下面页面-->
+                    <android.support.v7.widget.LinearLayoutCompat
+                        style="@style/MatchWrap.Vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        app:divider="@drawable/divider_horizontal"
+                        app:showDividers="beginning|middle|end">
+
+
+                        <RelativeLayout
+                            android:id="@+id/layout_bank"
+                            android:layout_width="fill_parent"
+                            android:layout_height="55dp"
+                            android:background="@drawable/selector_write_item">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:drawableLeft="@mipmap/my_bank"
+                                android:drawablePadding="15dp"
+                                android:gravity="center_vertical"
+                                android:text="我的银行卡"
+                                android:textColor="@color/global_black_color"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:id="@+id/tv_my_bank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="15dp"
+                                android:drawablePadding="10dp"
+                                android:drawableRight="@mipmap/icon_enter"
+                                android:textColor="@color/global_label_color"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/layout_my_order"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:drawableLeft="@mipmap/invite_code"
+                            android:background="@drawable/press_style"
+                            android:drawablePadding="15dp"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="我的订单"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/layout_my_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@drawable/press_style"
+                            android:drawableLeft="@mipmap/integration"
+                            android:drawablePadding="15dp"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="我的积分"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/layout_invitation"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@drawable/press_style"
+                            android:drawableLeft="@mipmap/forward_friends"
+                            android:drawablePadding="15dp"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="推荐给好友"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/layout_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@drawable/press_style"
+                            android:drawableLeft="@mipmap/icon_message_center"
+                            android:drawablePadding="15dp"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="消息中心"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/layout_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="@drawable/press_style"
+                            android:drawableLeft="@mipmap/help_center"
+                            android:drawablePadding="15dp"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:text="帮助中心"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/layout_qq"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/press_style"
+                            android:layout_height="55dp"
+                            android:drawableLeft="@mipmap/qq_group"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:drawableRight="@mipmap/icon_enter"
+                            android:text="联系客服"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:textColor="@color/global_black_color"
+                            android:textSize="15sp" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+                </android.support.v7.widget.LinearLayoutCompat>
+             </ScrollView>
+            </LinearLayout>
+    </com.innext.szqb.widget.loading.LoadingLayout>
+</LinearLayout>

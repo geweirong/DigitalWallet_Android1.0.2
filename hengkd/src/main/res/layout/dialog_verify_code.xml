@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_circle_side"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="温馨提示"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/shape_red_top_circle"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/global_black_color"
+        android:textSize="16sp"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
+    <EditText
+        android:id="@+id/et_verify_code"
+        android:maxLength="10"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="请输入验证码"
+        android:textSize="16sp"
+        android:background="@drawable/shape_edittext"
+        android:paddingLeft="8dp"
+        android:layout_height="47dp"/>
+    
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_edittext_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/iv_verify"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="47dp"/>
+
+        <View
+            android:background="#959595"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_change"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@mipmap/group"
+                android:gravity="center"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:textColor="#3788ed"
+                android:text="换一张"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error_msg"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:visibility="gone"
+        android:text="您输入的验证码错误，请重新输入。"
+        android:textColor="#ff5145"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:divider="@drawable/shape_dialog_divider"
+        android:showDividers="middle"
+        android:layout_marginBottom="22dp">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_horizontal"
+            android:layout_toLeftOf="@+id/view_vertical"
+            android:background="@drawable/layer_dialog_cancel"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="19sp"
+            android:textColor="@color/dialog_cancel"/>
+
+        <TextView
+            android:id="@+id/tv_accomplish"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_horizontal"
+            android:layout_toRightOf="@+id/view_vertical"
+            android:background="@drawable/layer_dialog_enter"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </LinearLayout>
+</LinearLayout>

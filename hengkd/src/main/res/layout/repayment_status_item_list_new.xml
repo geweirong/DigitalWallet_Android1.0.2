@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_item"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        tools:text="3/6期"
+        android:textColor="@color/c_333333"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_sum"
+        android:textColor="@color/c_333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="1253.00"
+        android:textSize="17sp"
+        android:paddingBottom="2dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_period"
+        app:layout_constraintTop_toBottomOf="@+id/tv_period"/>
+
+    <TextView
+        android:id="@+id/tv_detail_right"
+        android:textColor="@color/c_999999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        tools:text="(含服务费150.00 逾期费320.00)"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sum"
+        app:layout_constraintStart_toEndOf="@+id/tv_sum"
+        app:layout_constraintTop_toTopOf="@+id/tv_sum"/>
+
+    <TextView
+        android:id="@+id/tv_detail_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_999999"
+        android:textSize="11sp"
+        android:visibility="gone"
+        tools:text="(含服务费2300.00 含利息150.00 逾期费320.00)"
+        app:layout_constraintStart_toStartOf="@+id/tv_sum"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sum"/>
+
+    <TextView
+        android:id="@+id/tv_repayment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        tools:text="到期时间:2017-12-13"
+        android:textColor="@color/c_333333"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_period"
+        app:layout_constraintEnd_toStartOf="@+id/iv_enter"
+        app:layout_constraintTop_toTopOf="@+id/tv_period"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="逾期20天"
+        android:textColor="@color/c_ff4949"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_repayment_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_sum"/>
+
+    <ImageView
+        android:id="@+id/iv_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon_enter"
+        android:layout_marginRight="15dp"/>
+
+</android.support.constraint.ConstraintLayout>

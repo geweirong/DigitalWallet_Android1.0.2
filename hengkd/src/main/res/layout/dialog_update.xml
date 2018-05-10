@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by hengxinyongli at -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#30000000"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_circle_side"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_red_top_circle"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="12dp"
+            android:tag="beta_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:text="apk信息"
+            android:id="@+id/tv_apk_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="5dp"
+            android:tag="beta_upgrade_info"
+            android:textColor="@color/global_grey_black_color"
+            android:textSize="16sp"/>
+        <TextView
+            android:text="更新说明:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/global_black_color"
+            android:textSize="16sp"/>
+        <TextView
+            android:text="更新内容"
+            android:id="@+id/tv_update_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="6dp"
+            android:tag="beta_upgrade_feature"
+            android:textColor="@color/global_black_color"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:divider="@drawable/shape_dialog_divider"
+            android:showDividers="middle"
+            android:layout_marginBottom="22dp">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view_horizontal"
+                android:layout_toLeftOf="@+id/view_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/layer_dialog_cancel"
+                android:gravity="center"
+                android:tag="beta_cancel_button"
+                android:text="下次再说"
+                android:textColor="@color/dialog_cancel"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/tv_accomplish"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view_horizontal"
+                android:layout_toRightOf="@+id/view_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/layer_dialog_enter"
+                android:gravity="center"
+                android:tag="beta_confirm_button"
+                android:text="立即更新"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

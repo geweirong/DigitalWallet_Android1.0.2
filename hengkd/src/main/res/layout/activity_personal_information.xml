@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/MatchMatch.Vertical"
+              android:background="@color/theme_background_color">
+
+    <include layout="@layout/layout_toolbar" />
+    <com.innext.szqb.widget.loading.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <!--人脸识别-->
+            <LinearLayout
+                style="@style/MatchWrap"
+                android:background="@color/white"
+                android:divider="@drawable/divider_horizontal"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <TextView
+                    android:id="@+id/tv_tag"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="身份认证信息保存后将无法修改，请务必保证正确"
+                    android:textColor="@color/theme_color"
+                    android:textSize="13sp"
+                    android:background="@color/default_background"/>
+                <LinearLayout
+                    android:id="@+id/face_recognition"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="人脸识别"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_face_pic"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_face_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_default_face" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--身份证识别-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="身份证照"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_idcard_pic"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_idcard_facade"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@mipmap/icon_default_idcard_z" />
+
+                        <ImageView
+                            android:id="@+id/iv_idcard_contrary"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/icon_default_idcard_f" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--用户姓名-->
+                <LinearLayout style="@style/Fill_55_horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="姓        名"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_card_name"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:lines="1"
+                        android:gravity="center_vertical"
+                        android:hint="请输入真实姓名"
+                        android:maxLines="1"
+                        android:textColor="@color/global_black_color"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <!--身份证-->
+                <LinearLayout style="@style/Fill_55_horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="身  份  证"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_card_number"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:lines="1"
+                        android:gravity="center_vertical"
+                        android:hint="请输入身份证号"
+                        android:maxLines="1"
+                        android:textColor="@color/global_black_color"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <!-- 学历 -->
+                <LinearLayout
+                    style="@style/Fill_55_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="学        历"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_choose_degree"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_degree"
+                            android:layout_width="0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择"
+                            android:maxLines="1"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/tab_normal"
+                            android:textColorHint="@color/global_label_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--现居地址-->
+                <LinearLayout
+                    style="@style/Fill_55_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="现居地址"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_choose_home_area"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_home_area"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请选择"
+                            android:maxLines="1"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/tab_normal"
+                            android:textColorHint="@color/global_label_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--街道和门牌号-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <View
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_home_address"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="详细街道和门牌号"
+                        android:paddingRight="10dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:textColor="@color/tab_normal"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <!--婚姻状态-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="婚姻状况"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_choose_marriage"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_marriage"
+                            android:layout_width="0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:hint="请选择"
+                            android:textColor="@color/tab_normal"
+                            android:textColorHint="@color/global_label_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--居住时长-->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="55dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="居住时长"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_choose_live_time"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_live_time"
+                            android:layout_width="0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:hint="请选择"
+                            android:textColor="@color/tab_normal"
+                            android:textColorHint="@color/global_label_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/Fill_55_horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="公司名称"
+                        android:textColor="#000000"
+                        android:textSize="15sp"/>
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_company_name"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:maxLength="20"
+                        android:gravity="center_vertical"
+                        android:textColor="#000000"
+                        android:maxLines="1"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"
+                        android:hint="请输入公司名称"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/Fill_55_horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="公司电话"
+                        android:textColor="#000000"
+                        android:textSize="15sp"/>
+
+                    <com.innext.szqb.widget.ClearEditText
+                        android:id="@+id/et_company_phoneNum"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="3"
+                        android:maxLength="20"
+                        android:inputType="number"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="#000000"
+                        android:textColorHint="@color/global_label_color"
+                        android:textSize="15sp"
+                        android:hint="请输入公司电话"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="工作证明"
+                        android:textColor="@color/tab_normal"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_work_pic"
+                        android:layout_width="0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_work_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/ic_workpic" />
+
+                        <TextView
+                            android:layout_width="0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:hint="@string/work_img_hint"
+                            android:textColor="@color/tab_normal"
+                            android:textColorHint="@color/global_label_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_enter" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <include
+                    layout="@layout/layout_logo_bottom"/>
+            </LinearLayout>
+        </ScrollView>
+    </com.innext.szqb.widget.loading.LoadingLayout>
+
+</LinearLayout>
